@@ -1,212 +1,212 @@
-@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap");
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	gap: 2rem;
-	align-items: center;
-	min-height: 100vh;
-	background: #161515;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  min-height: 100vh;
+  background: url(https://images.unsplash.com/photo-1637946175491-53bca31c90ba?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHNob3BwaW5nJTIwbGlzdCUyMGJsYWNrfGVufDB8fDB8fHww);
 }
 
 h1 {
-	color: #fff;
+  color: #fff;
 }
 
 /* Form CSS */
 .form__group {
-	position: relative;
-	padding: 20px 0 0;
-	display: flex;
-	gap: 2rem;
+  position: relative;
+  padding: 20px 0 0;
+  display: flex;
+  gap: 2rem;
 }
 
 .form__field {
-	font-family: inherit;
-	width: 100%;
-	border: none;
-	border-bottom: 2px solid #9b9b9b;
-	outline: 0;
-	font-size: 17px;
-	padding: 7px 0;
-	background: transparent;
-	transition: border-color 0.2s;
-	color: #fff;
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 17px;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+  color: #fff;
 }
 
 .form__field::placeholder {
-	color: transparent;
+  color: transparent;
 }
 
 .form__field:placeholder-shown ~ .form__label {
-	font-size: 17px;
-	cursor: text;
-	top: 20px;
+  font-size: 17px;
+  cursor: text;
+  top: 20px;
 }
 
 .form__label {
-	position: absolute;
-	top: 0;
-	display: block;
-	transition: 0.2s;
-	font-size: 17px;
-	color: #9b9b9b;
-	pointer-events: none;
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #9b9b9b;
+  pointer-events: none;
 }
 
 .form__field:focus {
-	padding-bottom: 6px;
-	font-weight: 700;
-	border-width: 3px;
-	border-image: linear-gradient(to right, #116399, #38caef);
-	border-image-slice: 1;
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #116399, #38caef);
+  border-image-slice: 1;
 }
 
 .form__field:focus ~ .form__label {
-	position: absolute;
-	top: 0;
-	display: block;
-	transition: 0.2s;
-	font-size: 17px;
-	color: #38caef;
-	font-weight: 700;
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #38caef;
+  font-weight: 700;
 }
 
 /* reset input */
 .form__field:required,
 .form__field:invalid {
-	box-shadow: none;
+  box-shadow: none;
 }
 
 /* Add Button */
 .button {
-	position: relative;
-	transition: all 0.3s ease-in-out;
-	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-	padding-block: 0.5rem;
-	padding-inline: 1.25rem;
-	border-radius: 9999px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 10px;
-	cursor: pointer;
-	width: 200px;
-	font-weight: bold;
-	border: 3px solid #ffffff4d;
-	outline: none;
-	overflow: hidden;
-	font-size: 15px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  padding-block: 0.5rem;
+  padding-inline: 1.25rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  width: 200px;
+  font-weight: bold;
+  border: 3px solid #ffffff4d;
+  outline: none;
+  overflow: hidden;
+  font-size: 15px;
 }
 
 i {
-	transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .button:hover {
-	transform: scale(1.05);
-	border-color: #fff9;
+  transform: scale(1.05);
+  border-color: #fff9;
 }
 
 .button:hover .icon {
-	transform: translate(4px);
+  transform: translate(4px);
 }
 
 .button:hover::before {
-	animation: shine 1.5s ease-out infinite;
+  animation: shine 1.5s ease-out infinite;
 }
 
 .button::before {
-	content: '';
-	position: absolute;
-	width: 100px;
-	height: 100%;
-	background-image: linear-gradient(
-		120deg,
-		rgba(255, 255, 255, 0) 30%,
-		rgba(255, 255, 255, 0.8),
-		rgba(255, 255, 255, 0) 70%
-	);
-	top: 0;
-	left: -100px;
-	opacity: 0.6;
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
 }
 
 @keyframes shine {
-	0% {
-		left: -100px;
-	}
+  0% {
+    left: -100px;
+  }
 
-	60% {
-		left: 100%;
-	}
+  60% {
+    left: 100%;
+  }
 
-	to {
-		left: 100%;
-	}
+  to {
+    left: 100%;
+  }
 }
 
 /* List Container */
 ol {
-	padding: 2rem;
-	color: #fff;
-	display: flex;
-	flex-direction: column;
-	gap: 1rem;
+  padding: 2rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 /* List Items */
 li {
-	font-family: 'Love Ya Like A Sister', cursive;
-	font-weight: 400;
-	font-style: normal;
-	font-size: 1.5rem;
-	user-select: none;
-	padding: 0.5rem 1rem;
-	border-radius: 1rem;
-	box-shadow: 10px 10px 10px #26465c;
-	cursor: pointer;
+  font-family: "Love Ya Like A Sister", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
+  user-select: none;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 10px 10px 10px #26465c;
+  cursor: pointer;
 }
 
 .checked {
-	text-decoration: line-through;
-	text-decoration-thickness: 10px;
-	text-decoration-color: #e90a0a8a;
+  text-decoration: line-through;
+  text-decoration-thickness: 10px;
+  text-decoration-color: #e90a0a8a;
 }
 
 /* Clear ALl Button */
 .delete {
-	transition: all 0.3s ease-in-out;
-	background-color: red;
-	padding: 0.5rem;
-	cursor: pointer;
-	font-size: 20px;
-	color: #fff;
-	width: 80%;
-	display: block;
-	margin: auto;
+  transition: all 0.3s ease-in-out;
+  background-color: red;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 20px;
+  color: #fff;
+  width: 80%;
+  display: block;
+  margin: auto;
 }
 
 /* Media Queries */
 @media screen and (max-width: 500px) {
-	main {
-		width: 100%;
-		padding: 2rem;
-	}
-	.form__group {
-		flex-direction: column;
-		align-items: center;
-		gap: 1rem;
-	}
-	.delete {
-		width: 100%;
-	}
+  main {
+    width: 100%;
+    padding: 2rem;
+  }
+  .form__group {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .delete {
+    width: 100%;
+  }
 }
