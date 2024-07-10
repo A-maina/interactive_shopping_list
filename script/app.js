@@ -42,4 +42,5 @@ function addItem(event) {
   event.preventDefault();
   shoppingList.push(event.target[0].value);
   displayItems();
+  event.target.reset();
 }
