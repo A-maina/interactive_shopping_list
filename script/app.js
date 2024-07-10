@@ -26,8 +26,8 @@ const ol = select("ol");
 listen(document, "DOMContentLoaded", displayItems);
 
 function displayItems() {
+  ol.innerHTML = "";
   shoppingList.forEach(createAListItem);
-  console.log();
 }
 function createAListItem(item) {
   const li = createAnElement("li");
@@ -40,5 +40,6 @@ listen(form, "submit", addItem);
 
 function addItem(event) {
   event.preventDefault();
-  console.dir(event.target[0].value);
+  shoppingList.push(event.target[0].value);
+  displayItems();
 }
